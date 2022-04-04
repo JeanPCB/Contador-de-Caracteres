@@ -11,6 +11,7 @@ document.onclick = focusText;
 let areaTexto; 
 let numCaracateres;
 let numPalavras;
+let caracteresEsp;
 
 //O innerText do contador recebe o valor do comprimento do texto
 function funcaoContar() {
@@ -23,13 +24,17 @@ function funcaoContar() {
     } else {
         numCaracateres = areaTexto.length;
 
-        //Contar e reescrever o numero de palavras
-        if (areaTexto.match(/(\S+)/g) !== null) {
-            numPalavras = areaTexto.match(/(\S+)/g).length;
-            document.querySelector('#num-palavras').textContent = numPalavras;
-        }
-
         //Contar e reescrever o numero de caracteres
         document.querySelector('#num-caracteres').textContent = numCaracateres;
+
+        //Contar e reescrever o numero de palavras
+        if ((areaTexto.match(/[\\'´"!"#$%&()*+,-./:;<=>?@[\]^_`{|}~]/g)) && (areaTexto.match(/\S+/g))){
+            caracteresEsp = areaTexto.match(/([\\'´"!"#$%&()*+,-./:;<=>?@[\]^_`{|}~])+/g).length;
+            numPalavras = areaTexto.match(/\S+/g).length - caracteresEsp;
+            document.querySelector('#num-palavras').textContent = numPalavras;
+        } else {
+            numPalavras = areaTexto.match(/\S+/g).length;
+            document.querySelector('#num-palavras').textContent = numPalavras;
+        }
     }
 }
