@@ -1,5 +1,5 @@
 // FUNÇAO FOCAR AREA DE TEXTO (PAGINA INICIADA E NO CLIQUE)
-const focusText = function() {
+const focusText = function () {
     document.querySelector('#text-area').focus();
 }
 
@@ -8,7 +8,7 @@ window.onload = focusText;
 document.onclick = focusText;
 
 // FUNÇAO CONTAR:
-let areaTexto; 
+let areaTexto;
 let numCaracateres;
 let numPalavras;
 let caracteresEsp;
@@ -17,7 +17,7 @@ let caracteresEsp;
 function funcaoContar() {
     areaTexto = document.querySelector('#text-area').value;
 
-    if (areaTexto === ''){
+    if (areaTexto === '') {
         //Evitando Bug Descoberto
         document.querySelector('#num-caracteres').textContent = 0;
         document.querySelector('#num-palavras').textContent = 0;
@@ -28,13 +28,7 @@ function funcaoContar() {
         document.querySelector('#num-caracteres').textContent = numCaracateres;
 
         //Contar e reescrever o numero de palavras
-        if ((areaTexto.match(/[\\'´"!"#$%&()*+,-./:;<=>?@[\]^_`{|}~]/g)) && (areaTexto.match(/\S+/g))){
-            caracteresEsp = areaTexto.match(/([\\'´"!"#$%&()*+,-./:;<=>?@[\]^_`{|}~])+/g).length;
-            numPalavras = areaTexto.match(/\S+/g).length - caracteresEsp;
-            document.querySelector('#num-palavras').textContent = numPalavras;
-        } else {
-            numPalavras = areaTexto.match(/\S+/g).length;
-            document.querySelector('#num-palavras').textContent = numPalavras;
-        }
+        numPalavras = areaTexto.match(/(\w+)?[a-zA-Z0-9àáéíóúãõ][ç]?(\w+)?/gi).length;
+        document.querySelector('#num-palavras').textContent = numPalavras;
     }
 }
