@@ -28,7 +28,7 @@ function funcaoContar() {
         document.querySelector('#num-caracteres').textContent = numCaracateres;
 
         //Contar e reescrever o numero de palavras
-        numPalavras = areaTexto.match(/(\w+)?[a-z0-9àáéíóúãõâêîôû](ça)?(çe)?(çi)?(ço)?(çu)?(çã)?(çõ)?(\w+)?/gi).length;
+        numPalavras = areaTexto.match(/(\w+)?[a-z0-9àáéíóúãõâêîôûà&](ça)?(çe)?(çi)?(ço)?(çu)?(çã)?(çõ)?(\w+)?/gi).length;
         document.querySelector('#num-palavras').textContent = numPalavras;
     }
 }
