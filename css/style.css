@@ -11,10 +11,10 @@ body {
     height: 100vh;
     background-color: #000;
     font-family: 'terminalFont';
+    color: #00ff33;
 }
 
 section {
-    color: #00ff33;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,10 +56,10 @@ section {
 }
 
 #text-area {
+    color: #00ff33;
     resize: none;
     margin: 30px;
     background-color: #000;
-    color: #00ff33;
     border: none;
     padding: 10px;
     font-family: monospace;
@@ -69,9 +69,15 @@ section {
     outline: none !important;
 }
 
-::placeholder {
-    color: #00ff33;
-    opacity: 0.5;
+footer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+#comandos-title {
+    margin-bottom: 10px;
 }
  
 @media (min-width: 40em) {
@@ -89,7 +95,7 @@ section {
     .number-box {
         gap: 10px;
         padding: 20px;
-        margin: 20px 40px;
+        margin: 10px 40px;
         font-size: 1.2rem;
     }
 
