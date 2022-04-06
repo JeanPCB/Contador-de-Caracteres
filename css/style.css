@@ -79,6 +79,10 @@ footer {
 #comandos-title {
     margin-bottom: 10px;
 }
+
+.comandos-lines {
+    margin: 10px;
+}
  
 @media (min-width: 40em) {
 

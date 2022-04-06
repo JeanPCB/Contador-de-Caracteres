@@ -42,8 +42,20 @@ function comandos() {
     // Copiar Texto
     if ((areaTexto.substr(-3) === '--c') || (areaTexto.substr(-3) === '--C')) {
         textoCopiado = areaTexto.slice(0, -3);
-        document.querySelector('#text-area').value = document.querySelector('#text-area').value.slice(0, -3);
+        document.querySelector('#text-area').value = textoCopiado;
         navigator.clipboard.writeText(textoCopiado);
+        contar();
+    }
+
+    // Limpar Tudo
+    if ((areaTexto.substr(-3) === '--l') || (areaTexto.substr(-3) === '--L')) {
+        const limparConfirm = window.confirm('Limpar todo o texto?');
+        if (limparConfirm == true) {
+            document.querySelector('#text-area').value = '';
+        } else {
+            areaTexto = areaTexto.slice(0, -3);
+            document.querySelector('#text-area').value = areaTexto;
+        }
         contar();
     }
 }
