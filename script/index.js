@@ -33,29 +33,18 @@ function contar() {
     }
 }
 
-// FUNÇAO COMANDOS 
+//FUNÇOES COMANDOS
+const btnCopiar = document.querySelector('#btn-copiar');
+const btnLimpar = document.querySelector('#btn-limpar');
 
-let textoCopiado;
+btnCopiar.addEventListener('click', copiarTexto);
+btnLimpar.addEventListener('click', limparTexto);
 
-function comandos() {
+function copiarTexto() {
+    return navigator.clipboard.writeText(areaTexto);
+}
 
-    // Copiar Texto
-    if ((areaTexto.substr(-3) === '--c') || (areaTexto.substr(-3) === '--C')) {
-        textoCopiado = areaTexto.slice(0, -3);
-        document.querySelector('#text-area').value = textoCopiado;
-        navigator.clipboard.writeText(textoCopiado);
-        contar();
-    }
-
-    // Limpar Tudo
-    if ((areaTexto.substr(-3) === '--l') || (areaTexto.substr(-3) === '--L')) {
-        const limparConfirm = window.confirm('Limpar todo o texto?');
-        if (limparConfirm == true) {
-            document.querySelector('#text-area').value = '';
-        } else {
-            areaTexto = areaTexto.slice(0, -3);
-            document.querySelector('#text-area').value = areaTexto;
-        }
-        contar();
-    }
+function limparTexto() {
+    document.querySelector('#text-area').value = '';
+    contar();
 }

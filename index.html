@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="assets/fonts/webfontkit-20220401-182211/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Contador de Caracteres Online</title>
     <link rel="icon" href="./assets/images/favicon_io/android-chrome-512x512.png">
@@ -29,15 +29,14 @@
                 </div>
             </div>
             <div id="text-area-box">
-                <textarea oninput="contar(), comandos()" name="input-text" id="text-area" cols="60" rows="8"></textarea>
+                <textarea oninput="contar()" name="input-text" id="text-area" cols="60" rows="8"></textarea>
             </div>
         </div>
     </section>
     <footer>
         <div id="comandos">
-            <h3 id="comandos-title">COMANDOS</h3>
-            <p class="comandos-lines">--c ou --C = COPIAR TUDO</p>
-            <p class="comandos-lines">--l ou --L = LIMPAR TUDO</p>
+            <a id="btn-copiar" class="btn-comandos">COPIAR</a>
+            <a id="btn-limpar" class="btn-comandos">LIMPAR</a>
         </div>
     </footer>
     <script src="script/index.js"></script>
