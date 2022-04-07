@@ -11,7 +11,6 @@ document.onclick = focusText;
 let areaTexto;
 let numCaracateres;
 let numPalavras;
-let caracteresEsp;
 
 //O innerText do contador recebe o valor do comprimento do texto
 function contar() {
