@@ -44,6 +44,7 @@ function copiarTexto() {
 }
 
 function limparTexto() {
-    document.querySelector('#text-area').value = '';
-    contar();
+    if( window.confirm('Quer realmente limpar o texto?') == true )
+        document.querySelector('#text-area').value = '';
+    return contar()
 }
