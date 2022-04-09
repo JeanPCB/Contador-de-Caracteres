@@ -14,17 +14,17 @@
 
 <body>
     <section>
-        <h1 id="main-title">
+        <h1>
             CONTADOR DE CARACTERES
         </h1>
         <div id="infos">
             <div id="counter-boxes-area">
                 <div class="number-box">
-                    <h3>NUMERO DE CARACTERES</h3>
+                    <h2>NUMERO DE CARACTERES</h2>
                     <p id="num-caracteres" class="number">0</p>
                 </div>
                 <div id="contador-palavras" class="number-box">
-                    <h3>NUMERO DE PALAVRAS</h3>
+                    <h2>NUMERO DE PALAVRAS</h2>
                     <p id="num-palavras" class="number">0</p>
                 </div>
             </div>
@@ -33,9 +33,13 @@
             </div>
         </div>
         <div id="comandos">
-            <a id="btn-copiar" class="btn-comandos">COPIAR</a>
-            <a id="btn-limpar" class="btn-comandos">LIMPAR</a>
+            <a id="btn-copiar" class="btn-comandos">COPIAR<span class="underscore-hidden">_</span></a>
+            <a id="btn-limpar" class="btn-comandos">LIMPAR<span class="underscore-hidden">_</span></a>
         </div>
+        <dialog id="modal">
+            <h3>QUER MESMO LIMPAR TUDO?</h3>
+            <a id="btn-confirm-sim" class="btn-confirm">>SIM</a>
+        </dialog>
     </section>
     <script src="script/index.js"></script>
 </body>
