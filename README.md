@@ -5,11 +5,11 @@
 <div> <img src='./assets/gifs/main-screen.gif' height='400'> </div>
 <br>
 
-- **Link para o contador:** https://jeanpcb.github.io/Contador-de-Caracteres/
-
 - **Linguagem foco:** <br>
 ✔ Javascript
 
 - **Tecnologias Auxiliares:** <br>
 ✔ Html <br>
 ✔ CSS
+
+- **Link para o contador:** https://jeanpcb.github.io/Contador-de-Caracteres/
