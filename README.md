@@ -12,4 +12,4 @@
 ✔ Html <br>
 ✔ CSS
 
-🔗 <a href="https://jeanpcb.github.io/Contador-de-Caracteres/"> Clica pra conferir</a> 😉
+🔗 <a href="https://jeanpcb.github.io/Contador-de-Caracteres/"> Clique aqui pra conferir</a> 😉
