@@ -5,7 +5,7 @@
 <div> <img src='./assets/gifs/main-screen.gif' height='400'> </div>
 <br>
 
-🔗 <a href="https://jeanpcb.github.io/Contador-de-Caracteres/"> Clique aqui pra conferir</a> 😉
+🔗 <a href="https://contador-de-caracteres.netlify.app"> Clique aqui pra conferir</a> 😉
 
 - **Linguagem foco:** <br>
 ✔ Javascript
